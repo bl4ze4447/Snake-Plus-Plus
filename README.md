@@ -4,6 +4,8 @@ When compiling, use C++14 as a minimum and C++20 as recommended;
 
 Reason for this being made{ Experience, wanting to create this game without looking at internet ones and succeded, and after finishing it and looking at the ones already made I see a lot of magic numbers and overall the code isnt readable, this code should be easily readable by an experienced C++ developer };
 
+
+
 I tried to embed as many features of C++ into this project and succeded with the following:
 
   - Lambda Functions
@@ -23,6 +25,8 @@ I tried to embed as many features of C++ into this project and succeded with the
   - Pointers
 
   - Rand (used it because there is no need for security in a local snake game)
+
+
 
 Overall im really proud of how it turned out :)
 
