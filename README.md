@@ -30,6 +30,12 @@ I tried to embed as many features of C++ into this project and succeded with the
 
 Overall im really proud of how it turned out :)
 
+```Preview```
+>![game](prewiew.png)
+
+
+>![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+
 ```
 #include <iostream>
 #include <thread>
