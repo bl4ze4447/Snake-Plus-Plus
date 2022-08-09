@@ -49,7 +49,7 @@ using std::string;
 using std::thread;
 using std::chrono::milliseconds;
 using std::chrono::seconds;
-constexpr uint8_t MAP_ROWS{ 7 };
+constexpr uint8_t MAP_ROWS{ 7 }; 
 constexpr uint8_t MAP_LIMITS{ 2 };
 constexpr uint8_t MAP_COLUMNS{ 20 };
 constexpr uint8_t MAP_START{ 1 };
