@@ -49,7 +49,7 @@ using std::string;
 using std::thread;
 using std::chrono::milliseconds;
 using std::chrono::seconds;
-constexpr uint8_t MAP_ROWS{ 7 }; 
+constexpr uint8_t MAP_ROWS{ 7 };
 constexpr uint8_t MAP_LIMITS{ 2 };
 constexpr uint8_t MAP_COLUMNS{ 20 };
 constexpr uint8_t MAP_START{ 1 };
@@ -108,6 +108,7 @@ struct Fruit
 void display(Snake snake, Fruit fruit)
 {
     system("cls");
+    cout.flush();
     cout << "--------------------\n";
     for (size_t Y_AXIS{ 1 }; Y_AXIS < MAP_ROWS - 1; Y_AXIS++) // -1 because at last we can print the entire line without wasting performance
     {
@@ -283,7 +284,11 @@ void gameChecker(Snake* snake)
 int main()
 {
     // Initialization
+    std::ios_base::sync_with_stdio(false);
+    cin.tie(NULL); // Why did we include these two lines: https://www.geeksforgeeks.org/fast-io-for-competitive-programming/
+
     srand(time(NULL));
+
     Fruit fruit{};
     fruit.X_POS = 15;
     fruit.Y_POS = 1;
@@ -320,7 +325,7 @@ int main()
     while (true)
     {
         display(snake, fruit);
-        std::this_thread::sleep_for(milliseconds(100));
+        std::this_thread::sleep_for(milliseconds(75));
         if (_kbhit())
         {
             inputHandler(&direction, &snake);
